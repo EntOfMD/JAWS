@@ -41,10 +41,12 @@ export const processChartMDData = async () => {
 
     debug(`Found ${incidents.length} Montgomery County incidents`)
 
+    let successCount = 0
     for (const incident of incidents) {
       try {
         await insertChartMDIncident(incident)
         debug(`Inserted incident ${incident.incident_id}`)
+        successCount++
       } catch (err) {
         _error('Failed to insert incident', {
           error: err.message,
@@ -53,7 +55,9 @@ export const processChartMDData = async () => {
       }
     }
 
-    info(`Processed ${incidents.length} ChartMD incidents`)
+    info(
+      `Successfully processed ${successCount}/${incidents.length} ChartMD incidents`,
+    )
   } catch (err) {
     _error('ChartMD processing failed', {
       error: err.message,

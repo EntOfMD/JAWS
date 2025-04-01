@@ -1,8 +1,9 @@
 import { pool } from '../config/db.js'
-import { error as _error } from '../util/logger.js'
+import { error as _error, info } from '../util/logger.js'
 
 export const createChartMDIncidentTable = async () => {
-  const query = `
+  // Create table if it doesn't exist
+  const createTableQuery = `
     CREATE TABLE IF NOT EXISTS chartmd_incidents (
       entry_id BIGSERIAL PRIMARY KEY,
       incident_id VARCHAR(255) NOT NULL,
@@ -25,14 +26,19 @@ export const createChartMDIncidentTable = async () => {
       additional_data JSONB,
       source VARCHAR(100),
       op_center VARCHAR(100),
-      recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      recorded_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
     );
-    
+
+    -- Create indices if they don't exist
     CREATE INDEX IF NOT EXISTS idx_chartmd_incident_id ON chartmd_incidents(incident_id);
     CREATE INDEX IF NOT EXISTS idx_chartmd_recorded_at ON chartmd_incidents(recorded_at);
   `
+
   try {
-    await pool.query(query)
+    const result = await pool.query(createTableQuery)
+    result.rowCount
+      ? info(`Table created with ${result.rowCount} rows affected)`)
+      : info('Skipping create table, already exists')
   } catch (err) {
     _error('Failed to create ChartMD incidents table', {
       error: err.message,
@@ -52,33 +58,35 @@ export const insertChartMDIncident = async (incident) => {
     )
     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20)
   `
-  const values = [
-    incident.incident_id,
-    incident.incident_type,
-    incident.description,
-    incident.location,
-    incident.county,
-    incident.severity,
-    incident.lat,
-    incident.lon,
-    incident.lanes,
-    incident.create_time,
-    incident.start_time,
-    incident.last_update,
-    incident.direction,
-    incident.vehicles_involved,
-    incident.lanes_status,
-    incident.participants,
-    incident.traffic_alert,
-    incident.additionalData || {},
-    incident.source,
-    incident.opCenter,
-  ]
 
   try {
-    await pool.query(query, values)
+    await pool.query(query, [
+      incident.incident_id,
+      incident.incident_type,
+      incident.description,
+      incident.location,
+      incident.county,
+      incident.severity,
+      incident.lat,
+      incident.lon,
+      incident.lanes,
+      incident.create_time,
+      incident.start_time,
+      incident.last_update,
+      incident.direction,
+      incident.vehicles_involved,
+      incident.lanes_status,
+      incident.participants,
+      incident.traffic_alert,
+      incident.additionalData || {},
+      incident.source,
+      incident.opCenter,
+    ])
+    info(`Inserted ChartMD incident: ${incident.incident_id}`)
+
+    return true
   } catch (err) {
-    _error('Failed to insert/update ChartMD incident', {
+    _error('Failed to insert ChartMD incident', {
       error: err.message,
       incident_id: incident.incident_id,
     })
