@@ -3,6 +3,8 @@ import { processWTOPData } from './services/wtopService.js'
 import { createChartMDIncidentTable } from './models/chartmdIncidents.js'
 import { createWTOPIncidentTable } from './models/wtopIncidents.js'
 import { error as _error, info, debug } from './util/logger.js'
+import { config } from './config/config.js'
+import { healthCheck } from './config/db.js'
 
 // Initialize tables
 Promise.all([createChartMDIncidentTable(), createWTOPIncidentTable()]).catch(
@@ -39,7 +41,7 @@ const interval = setInterval(async () => {
       timestamp: new Date().toISOString(),
     })
   }
-}, 300000)
+}, config.pollingInterval)
 
 // Graceful shutdown handlers
 process.on('SIGTERM', () => {
@@ -67,3 +69,21 @@ process.on('unhandledRejection', (reason, promise) => {
     timestamp: new Date().toISOString(),
   })
 })
+
+setInterval(async () => {
+  try {
+    info('Performing database health check')
+    await healthCheck()
+    info('Database health check passed')
+  } catch (error) {
+    error('Database health check failed', {
+      error: error.message,
+      stack: error.stack,
+    })
+    clearInterval(interval)
+    info(
+      'Stopping scheduled data processing due to database health check failure',
+    )
+    process.exit(1)
+  }
+}, 60000) // Check every minute
