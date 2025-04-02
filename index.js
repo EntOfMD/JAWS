@@ -1,5 +1,5 @@
 import { processChartMDData } from './services/chartmdService.js'
-import { processWTOPData } from './services/wtopService.js'
+import { processWTOPData, cleanup as cleanupWTOP } from './services/wtopService.js'
 import { createChartMDIncidentTable } from './models/chartmdIncidents.js'
 import { createWTOPIncidentTable } from './models/wtopIncidents.js'
 import { error as _error, info, debug } from './util/logger.js'
@@ -44,8 +44,9 @@ const interval = setInterval(async () => {
 }, config.pollingInterval)
 
 // Graceful shutdown handlers
-process.on('SIGTERM', () => {
+process.on('SIGTERM', async () => {
   info('SIGTERM signal received')
+  await cleanupWTOP()
   clearInterval(interval)
   info('Polling interval cleared')
   info('Application shutting down gracefully')

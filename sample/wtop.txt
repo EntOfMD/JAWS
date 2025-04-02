@@ -1,0 +1,732 @@
+<div id="incidents_container" style="overflow: hidden; padding: 0px; width: 350px;">
+        
+        
+    
+
+        
+    <div class="jspContainer" style="width: 350px; height: 700px;"><div class="jspPane" style="padding: 0px; top: 0px; left: 0px; width: 350px;"><div id="incidents-header" class="row">
+            <h2 class="incidents-header__title">Live Traffic Incidents</h2>
+            <label for="incident-grouping" class="accessible-text">GROUPED BY:</label>
+            <div class="incidents-header__select-wrapper">
+                <select name="incidents-grouped-by" id="incident-grouping">
+                    <option value="severity">Severity</option>
+                    <option value="location">Location</option>
+                    <option value="road">Major Road</option>
+                </select>
+            </div>
+        </div><div class="alertbelt incidents-list" id="incident-list-severity">        
+            <h3 class="traffic-stream__title">Major Severity</h3>                    <div class="newsstream-item traffic-stream-severity-3" data-traffic-stream-id="traffic-stream-item-543478">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/accident-3-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/I-270.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Crash</b><br><span class="subcat">I-270 Local Lanes</span> <span class="direction">northbound</span> <span class="position">near</span> <span class="cl1">Shady Grove Rd (#8)</span>, <span class="blockage">proceed with caution</span> by the <span class="type">crash</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:53pm<br>
+                                    Updated: 04/01/2025 at 07:53pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    
+                <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                <h3 class="traffic-stream__title">Moderate Severity</h3>                    <div class="newsstream-item traffic-stream-severity-2" data-traffic-stream-id="traffic-stream-item-543479">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-2-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/US-50.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Work Zone</b><br><span class="subcat">US-50</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">the Chesapeake Bay Bridge</span>, <span class="blockage">eastbound span closed, two-way traffic on westbound span</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:58pm<br>
+                                    Updated: 04/01/2025 at 07:58pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    
+                <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                <h3 class="traffic-stream__title">Construction Severity</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542136" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">S St NW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Florida Ave NW</span> and <span class="cl2">New Jersey Ave NW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/23/2025 at 06:36am<br>
+                                    Updated: 03/23/2025 at 10:30am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-503700" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Utility Work Zone</b><br><span class="subcat">22nd St NW</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Massachusetts Ave NW</span> and <span class="cl2">P St SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">utility work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 07/15/2024 at 12:23pm<br>
+                                    Updated: 07/16/2024 at 04:12pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-499285" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">Ohio Dr SW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Independence Ave SW</span> and <span class="cl2">West Basin Dr SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 06/17/2024 at 02:30pm<br>
+                                    Updated: 11/29/2024 at 03:34pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc/2024/06/part-of-ohio-drive-near-the-lincoln-memorial-set-to-close-for-the-next-6" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542791" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-650.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Work Zone</b><br><span class="subcat">MD-650/New Hampshire Ave</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-193/University Blvd</span>, <span class="blockage">follow posted detour</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/27/2025 at 02:31pm<br>
+                                    Updated: 03/28/2025 at 04:46am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540371" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">Old Branch Ave</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Allentown Rd</span> and <span class="cl2">Kirby Rd</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/10/2025 at 06:49am<br>
+                                    Updated: 03/11/2025 at 02:18pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540219" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-193.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">MD-193/University Blvd E</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-650/New Hampshire Ave</span>, <span class="blockage">follow crew direction</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/08/2025 at 07:37pm<br>
+                                    Updated: 03/08/2025 at 07:37pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-537740" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-5.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">MD-5/Branch Ave</span> <span class="direction">southbound</span> <span class="position">ramp to Outer Loop</span> <span class="cl1">I-495/Capital Beltway</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 02/19/2025 at 03:02pm<br>
+                                    Updated: 02/20/2025 at 02:04pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-522972" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-355.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">MD-355/Wisconsin Ave</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Commerce Ln/Avondale St</span> and <span class="cl2">Montgomery Ave</span>, <span class="blockage">right side blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 11/02/2024 at 09:23pm<br>
+                                    Updated: 11/02/2024 at 09:23pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542933" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-267.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Work Zone</b><br><span class="subcat">VA-267/Dulles Toll Rd</span> <span class="direction">eastbound</span> <span class="position">at</span> <span class="cl1">Main Toll Plaza</span>, <span class="blockage">two right lanes blocked</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/29/2025 at 06:11am<br>
+                                    Updated: 04/01/2025 at 03:35pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-531539" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-236.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">VA-236/Duke St</span> <span class="direction">eastbound</span> <span class="position">ramp to</span> <span class="cl1">Van Dorn St</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 12/31/2024 at 03:30pm<br>
+                                    Updated: 01/02/2025 at 02:46pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-413210" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                        <b>Long Term Work Zone</b><br><span class="subcat">George Washington Pkwy</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">VA-123/Chain Bridge Rd</span> and <span class="cl2">Windy Run</span>, <span class="blockage">proceed with caution</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/22/2023 at 12:04am<br>
+                                    Updated: 02/24/2025 at 02:26pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc-transit/2023/06/more-traffic-dividers-are-coming-to-your-commute-on-the-gw-parkw" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    
+                <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                   
+        </div><div class="alertbelt incidents-list" style="display:none" id="incident-list-location">
+            <h3 class="traffic-stream__title">District Of Columbia</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542136" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">S St NW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Florida Ave NW</span> and <span class="cl2">New Jersey Ave NW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/23/2025 at 06:36am<br>
+                                    Updated: 03/23/2025 at 10:30am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-503700" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Utility Work Zone</b><br><span class="subcat">22nd St NW</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Massachusetts Ave NW</span> and <span class="cl2">P St SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">utility work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 07/15/2024 at 12:23pm<br>
+                                    Updated: 07/16/2024 at 04:12pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-499285" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">Ohio Dr SW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Independence Ave SW</span> and <span class="cl2">West Basin Dr SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 06/17/2024 at 02:30pm<br>
+                                    Updated: 11/29/2024 at 03:34pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc/2024/06/part-of-ohio-drive-near-the-lincoln-memorial-set-to-close-for-the-next-6" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">Maryland</h3>                    <div class="newsstream-item traffic-stream-severity-2" data-traffic-stream-id="traffic-stream-item-543479">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-2-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/US-50.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">US-50</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">the Chesapeake Bay Bridge</span>, <span class="blockage">eastbound span closed, two-way traffic on westbound span</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:58pm<br>
+                                    Updated: 04/01/2025 at 07:58pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-3" data-traffic-stream-id="traffic-stream-item-543478">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/accident-3-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/I-270.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Crash</b><br><span class="subcat">I-270 Local Lanes</span> <span class="direction">northbound</span> <span class="position">near</span> <span class="cl1">Shady Grove Rd (#8)</span>, <span class="blockage">proceed with caution</span> by the <span class="type">crash</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:53pm<br>
+                                    Updated: 04/01/2025 at 07:53pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542791" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-650.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">MD-650/New Hampshire Ave</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-193/University Blvd</span>, <span class="blockage">follow posted detour</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/27/2025 at 02:31pm<br>
+                                    Updated: 03/28/2025 at 04:46am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540371" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">Old Branch Ave</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Allentown Rd</span> and <span class="cl2">Kirby Rd</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/10/2025 at 06:49am<br>
+                                    Updated: 03/11/2025 at 02:18pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540219" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-193.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-193/University Blvd E</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-650/New Hampshire Ave</span>, <span class="blockage">follow crew direction</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/08/2025 at 07:37pm<br>
+                                    Updated: 03/08/2025 at 07:37pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-537740" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-5.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-5/Branch Ave</span> <span class="direction">southbound</span> <span class="position">ramp to Outer Loop</span> <span class="cl1">I-495/Capital Beltway</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 02/19/2025 at 03:02pm<br>
+                                    Updated: 02/20/2025 at 02:04pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-522972" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-355.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-355/Wisconsin Ave</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Commerce Ln/Avondale St</span> and <span class="cl2">Montgomery Ave</span>, <span class="blockage">right side blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 11/02/2024 at 09:23pm<br>
+                                    Updated: 11/02/2024 at 09:23pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">Virginia</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542933" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-267.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">VA-267/Dulles Toll Rd</span> <span class="direction">eastbound</span> <span class="position">at</span> <span class="cl1">Main Toll Plaza</span>, <span class="blockage">two right lanes blocked</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/29/2025 at 06:11am<br>
+                                    Updated: 04/01/2025 at 03:35pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-531539" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-236.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">VA-236/Duke St</span> <span class="direction">eastbound</span> <span class="position">ramp to</span> <span class="cl1">Van Dorn St</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 12/31/2024 at 03:30pm<br>
+                                    Updated: 01/02/2025 at 02:46pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-413210" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">George Washington Pkwy</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">VA-123/Chain Bridge Rd</span> and <span class="cl2">Windy Run</span>, <span class="blockage">proceed with caution</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/22/2023 at 12:04am<br>
+                                    Updated: 02/24/2025 at 02:26pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc-transit/2023/06/more-traffic-dividers-are-coming-to-your-commute-on-the-gw-parkw" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                </div><div class="alertroads incidents-list" style="display:none" id="incident-list-road">
+            <h3 class="traffic-stream__title">Dulles Toll Rd</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542933" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-267.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">VA-267/Dulles Toll Rd</span> <span class="direction">eastbound</span> <span class="position">at</span> <span class="cl1">Main Toll Plaza</span>, <span class="blockage">two right lanes blocked</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/29/2025 at 06:11am<br>
+                                    Updated: 04/01/2025 at 03:35pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">I-270</h3>                    <div class="newsstream-item traffic-stream-severity-3" data-traffic-stream-id="traffic-stream-item-543478">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/accident-3-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/I-270.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Crash</b><br><span class="subcat">I-270 Local Lanes</span> <span class="direction">northbound</span> <span class="position">near</span> <span class="cl1">Shady Grove Rd (#8)</span>, <span class="blockage">proceed with caution</span> by the <span class="type">crash</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:53pm<br>
+                                    Updated: 04/01/2025 at 07:53pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">US-50 (Maryland)</h3>                    <div class="newsstream-item traffic-stream-severity-2" data-traffic-stream-id="traffic-stream-item-543479">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-2-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/US-50.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">US-50</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">the Chesapeake Bay Bridge</span>, <span class="blockage">eastbound span closed, two-way traffic on westbound span</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/01/2025 at 07:58pm<br>
+                                    Updated: 04/01/2025 at 07:58pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">George Washington Pkwy</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-413210" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">George Washington Pkwy</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">VA-123/Chain Bridge Rd</span> and <span class="cl2">Windy Run</span>, <span class="blockage">proceed with caution</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 04/22/2023 at 12:04am<br>
+                                    Updated: 02/24/2025 at 02:26pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc-transit/2023/06/more-traffic-dividers-are-coming-to-your-commute-on-the-gw-parkw" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+            <h3 class="traffic-stream__title">Other</h3>                    <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542136" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">S St NW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Florida Ave NW</span> and <span class="cl2">New Jersey Ave NW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/23/2025 at 06:36am<br>
+                                    Updated: 03/23/2025 at 10:30am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-503700" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Utility Work Zone</b><br><span class="subcat">22nd St NW</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Massachusetts Ave NW</span> and <span class="cl2">P St SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">utility work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 07/15/2024 at 12:23pm<br>
+                                    Updated: 07/16/2024 at 04:12pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-499285" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/NPS.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">Ohio Dr SW</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Independence Ave SW</span> and <span class="cl2">West Basin Dr SW</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 06/17/2024 at 02:30pm<br>
+                                    Updated: 11/29/2024 at 03:34pm                                </div>
+                                                                    <div class="traffic-stream__item-read-more">
+                                        <a href="https://wtop.com/dc/2024/06/part-of-ohio-drive-near-the-lincoln-memorial-set-to-close-for-the-next-6" target="_blank">READ
+                                            MORE &gt;&gt;</a>
+                                    </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-542791" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-650.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Work Zone</b><br><span class="subcat">MD-650/New Hampshire Ave</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-193/University Blvd</span>, <span class="blockage">follow posted detour</span> by the <span class="type">work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/27/2025 at 02:31pm<br>
+                                    Updated: 03/28/2025 at 04:46am                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540371" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">Old Branch Ave</span> <span class="direction">both ways</span> <span class="position">between</span> <span class="cl1">Allentown Rd</span> and <span class="cl2">Kirby Rd</span>, <span class="blockage">road closure in effect</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/10/2025 at 06:49am<br>
+                                    Updated: 03/11/2025 at 02:18pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-540219" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-193.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-193/University Blvd E</span> <span class="direction">both ways</span> <span class="position">at</span> <span class="cl1">MD-650/New Hampshire Ave</span>, <span class="blockage">follow crew direction</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 03/08/2025 at 07:37pm<br>
+                                    Updated: 03/08/2025 at 07:37pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-537740" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-5.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-5/Branch Ave</span> <span class="direction">southbound</span> <span class="position">ramp to Outer Loop</span> <span class="cl1">I-495/Capital Beltway</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 02/19/2025 at 03:02pm<br>
+                                    Updated: 02/20/2025 at 02:04pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-522972" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/MD-355.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">MD-355/Wisconsin Ave</span> <span class="direction">southbound</span> <span class="position">between</span> <span class="cl1">Commerce Ln/Avondale St</span> and <span class="cl2">Montgomery Ave</span>, <span class="blockage">right side blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 11/02/2024 at 09:23pm<br>
+                                    Updated: 11/02/2024 at 09:23pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                        <div class="newsstream-item traffic-stream-severity-1" data-traffic-stream-id="traffic-stream-item-531539" style="display:none">
+                        <div class="traffic-stream__item">
+                            <div class="traffic-stream__item-row">
+                                <div class="traffic-stream__icons">
+                                    <img src="https://tools.wtopnews.com/traffic/assets/images/traffic-markers/32x32/work-zone-1-32x32.png" class="traffic-map__route-image" alt="traffic icon"><img src="https://wtop.com/wp-content/themes/wtop-new/assets/img/traffic/icons/VA-236.png" class="traffic-map__route-image" alt="traffic icon"> 
+                                </div>
+                                <div class="traffic-stream__incident-details">
+                                    <b>Long Term Work Zone</b><br><span class="subcat">VA-236/Duke St</span> <span class="direction">eastbound</span> <span class="position">ramp to</span> <span class="cl1">Van Dorn St</span>, <span class="blockage">ramp blocked</span> by the <span class="type">long term work zone</span>.                                 </div>
+                            </div>
+                            <div class="traffic-stream__item-row traffic-stream__item-row--footer">
+                                <div class="traffic-stream__item-roads">
+                                    Reported: 12/31/2024 at 03:30pm<br>
+                                    Updated: 01/02/2025 at 02:46pm                                </div>
+                                                            </div>
+                        </div>
+                    </div>
+                                                    <div class="incidents-list__toggle-container">
+                    <button class="incidents-list__toggle">Show More</button>
+                </div>
+                                </div></div></div></div>
