@@ -1,0 +1,53 @@
+04/03/2025, 09:28:52 [INFO]: Database tables initialized successfully
+04/03/2025, 09:28:52 [INFO]: Skipping create table, already exists
+04/03/2025, 09:29:52 [INFO]: Starting scheduled data processing
+04/03/2025, 09:29:52 [DEBUG]: Fetching data from https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do
+04/03/2025, 09:29:52 [INFO]: Performing database health check
+04/03/2025, 09:29:52 [INFO]: Database health check passed
+04/03/2025, 09:29:52 [DEBUG]: Found 1 Montgomery County incidents
+04/03/2025, 09:29:52 [INFO]: Successfully processed 1/1 ChartMD incidents
+04/03/2025, 09:29:52 [INFO]: ChartMD processing completed {"processingTime":"148ms","incidentsProcessed":1}
+04/03/2025, 09:29:52 [DEBUG]: Initializing browser instance
+04/03/2025, 09:29:52 [INFO]: Successfully processed 63/63 WTOP incidents
+04/03/2025, 09:29:52 [INFO]: WTOP processing completed {"processingTime":"498ms","incidentsProcessed":63}
+04/03/2025, 09:29:52 [INFO]: Scheduled data processing cycle completed
+04/03/2025, 09:30:52 [INFO]: Starting scheduled data processing
+04/03/2025, 09:30:52 [DEBUG]: Fetching data from https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do
+04/03/2025, 09:30:52 [INFO]: Performing database health check
+04/03/2025, 09:30:52 [DEBUG]: Found 1 Montgomery County incidents
+04/03/2025, 09:30:52 [INFO]: Successfully processed 1/1 ChartMD incidents
+04/03/2025, 09:30:52 [INFO]: ChartMD processing completed {"processingTime":"124ms","incidentsProcessed":1}
+04/03/2025, 09:30:52 [INFO]: Database health check passed
+04/03/2025, 09:30:52 [INFO]: Successfully processed 63/63 WTOP incidents
+04/03/2025, 09:30:52 [INFO]: WTOP processing completed {"processingTime":"152ms","incidentsProcessed":63}
+04/03/2025, 09:30:52 [INFO]: Scheduled data processing cycle completed
+04/03/2025, 09:31:52 [INFO]: Starting scheduled data processing
+04/03/2025, 09:31:52 [DEBUG]: Fetching data from https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do
+04/03/2025, 09:31:52 [INFO]: Performing database health check
+04/03/2025, 09:31:52 [INFO]: Database health check passed
+04/03/2025, 09:31:52 [DEBUG]: Found 1 Montgomery County incidents
+04/03/2025, 09:31:52 [INFO]: Successfully processed 1/1 ChartMD incidents
+04/03/2025, 09:31:52 [INFO]: ChartMD processing completed {"processingTime":"92ms","incidentsProcessed":1}
+04/03/2025, 09:31:52 [INFO]: Successfully processed 63/63 WTOP incidents
+04/03/2025, 09:31:52 [INFO]: WTOP processing completed {"processingTime":"173ms","incidentsProcessed":63}
+04/03/2025, 09:31:52 [INFO]: Scheduled data processing cycle completed
+04/03/2025, 09:32:52 [INFO]: Starting scheduled data processing
+04/03/2025, 09:32:52 [DEBUG]: Fetching data from https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do
+04/03/2025, 09:32:52 [INFO]: Performing database health check
+04/03/2025, 09:32:52 [DEBUG]: Found 1 Montgomery County incidents
+04/03/2025, 09:32:52 [INFO]: Successfully processed 1/1 ChartMD incidents
+04/03/2025, 09:32:52 [INFO]: ChartMD processing completed {"processingTime":"126ms","incidentsProcessed":1}
+04/03/2025, 09:32:52 [INFO]: Database health check passed
+04/03/2025, 09:32:52 [INFO]: Successfully processed 63/63 WTOP incidents
+04/03/2025, 09:32:52 [INFO]: WTOP processing completed {"processingTime":"149ms","incidentsProcessed":63}
+04/03/2025, 09:32:52 [INFO]: Scheduled data processing cycle completed
+04/03/2025, 09:33:52 [INFO]: Starting scheduled data processing
+04/03/2025, 09:33:52 [DEBUG]: Fetching data from https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do
+04/03/2025, 09:33:52 [INFO]: Performing database health check
+04/03/2025, 09:33:52 [INFO]: Database health check passed
+04/03/2025, 09:33:52 [DEBUG]: Found 1 Montgomery County incidents
+04/03/2025, 09:33:52 [INFO]: Successfully processed 1/1 ChartMD incidents
+04/03/2025, 09:33:52 [INFO]: ChartMD processing completed {"processingTime":"90ms","incidentsProcessed":1}
+04/03/2025, 09:33:52 [INFO]: Successfully processed 66/66 WTOP incidents
+04/03/2025, 09:33:52 [INFO]: WTOP processing completed {"processingTime":"156ms","incidentsProcessed":66}
+04/03/2025, 09:33:52 [INFO]: Scheduled data processing cycle completed

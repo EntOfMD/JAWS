@@ -7,64 +7,26 @@ A Node.js application that scrapes traffic incident data from Maryland traffic s
 ### ChartMD Traffic System
 
 - **URL**: `https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do`
-- **Type**: JSON API
-- **Update Frequency**: Every 5 minutes
-- **Data Format**: JSON with incident details
-- **Geographic Focus**: Montgomery County, MD
+- **Type**: JSON
+- **Data Elements**:
+  - Incident type and severity
+  - Location details (lat/lon)
+  - Lane status and direction
+  - Timestamps (create, start, update)
+  - Vehicle involvement
+  - Traffic alerts
 
 ### WTOP Traffic Feed
 
-- **URL**: `https://wtop.com/traffic/feed/`
-- **Type**: RSS Feed
-- **Update Frequency**: Every 5 minutes
-- **Data Format**: RSS/XML
+- **URL**: `https://wtop.com/traffic`
+- **Type**: Web Scraping
+- **Data Elements**: 
+  - Incident details and severity
+  - Location information
+  - Timestamps (reported, updated)
+  - Traffic directions
+  - Road blockage status
 
-## Database Schema
-
-### ChartMD Incidents Table
-
-```sql
-CREATE TABLE chartmd_incidents (
-  incident_id VARCHAR(255) PRIMARY KEY,
-  incident_type VARCHAR(255),
-  description TEXT,
-  location VARCHAR(255),
-  county VARCHAR(100),
-  severity INTEGER,
-  lat DOUBLE PRECISION,
-  lon DOUBLE PRECISION,
-  lanes TEXT,
-  create_time TIMESTAMP,
-  start_time TIMESTAMP,
-  last_update TIMESTAMP,
-  direction VARCHAR(50),
-  vehicles_involved TEXT,
-  lanes_status TEXT,
-  participants TEXT,
-  traffic_alert BOOLEAN,
-  additional_data JSONB,
-  source VARCHAR(100),
-  op_center VARCHAR(100)
-);
-```
-
-### WTOP Incidents Table
-
-```sql
-CREATE TABLE wtop_incidents (
-  incident_id VARCHAR(255) PRIMARY KEY,
-  title VARCHAR(255),
-  description TEXT,
-  location VARCHAR(255),
-  severity VARCHAR(100),
-  lat DOUBLE PRECISION,
-  lon DOUBLE PRECISION,
-  reported_time TIMESTAMP,
-  last_update TIMESTAMP,
-  source VARCHAR(100),
-  additional_data JSONB
-);
-```
 
 ## Setup
 
@@ -105,39 +67,55 @@ npm start
 
 ## Features
 
-- Real-time traffic incident monitoring
-- Automatic data collection every 5 minutes
+- Automatic data collection
 - PostgreSQL persistence with JSONB support
-- Structured logging with Winston
-- Graceful shutdown handling
+- Structured logging
 - Error tracking and reporting
-- Geographic filtering (Montgomery County focus)
-- Severity classification
-- Location extraction and normalization
+
+## Performance Features
+
+### ChartMD Service
+- Structured JSON parsing
+- Efficient data mapping
+- Error resilient processing
+
+### WTOP Service
+- Browser instance caching
+- Resource filtering (blocks images, CSS, fonts)
+- Memory-optimized viewport
+- Request interception
+- Navigation timeout handling
 
 ## Error Handling
 
 - Database connection failures
 - API timeout and connection issues
 - Invalid response formats
-- Data parsing errors
-- Network connectivity issues
+- Browser automation errors
+- HTML parsing failures
+- Date format variations
+- Resource cleanup on exit
 
 ## Logging
 
-Logs are stored in:
+### Log Levels
+- **DEBUG**: Detailed processing information
+- **INFO**: Service status and completion
+- **ERROR**: Processing and connection failures
 
+### Log Files
 - `logs/error.log`: Error-level messages
 - `logs/combined.log`: All log levels
+- Format: `timestamp [LEVEL]: message {metadata}`
 
 ## Dependencies
 
 - Node.js >= 16.0.0
 - PostgreSQL >= 12
-- axios: API requests
+- axios: ChartMD API requests
+- puppeteer: WTOP web scraping
 - pg: PostgreSQL client
-- winston: Logging
-- rss-parser: WTOP feed parsing
+- winston: Structured logging
 - dotenv: Environment configuration
 
 ## Development
@@ -147,6 +125,13 @@ Format code using Prettier:
 ```bash
 .\format.ps1
 ```
+
+## Data Samples
+ - [chartMD.json - ChartMD Incidents JSON return structure](./sample/chartMD.json)
+ - [wtop.txt - WTOP HTML structure](./sample/wtop.txt)
+ - [ChartMD DB dump - `SELECT DISTINCT * FROM chartmd_incidents WHERE lanes_status != 'All lanes open' ORDER BY entry_id ASC`](./sample/data-1743559424048.csv)
+ - [WTOP DB dump - `SELECT * FROM wtop_incidents ORDER BY incident_id ASC `](./sample/wtop_incidents.csv)
+ - [Logger dump](./sample/log.log)
 
 ## License
 

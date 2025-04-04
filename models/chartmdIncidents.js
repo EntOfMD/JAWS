@@ -82,8 +82,7 @@ export const insertChartMDIncident = async (incident) => {
       incident.source,
       incident.opCenter,
     ])
-    info(`Inserted ChartMD incident: ${incident.incident_id}`)
-
+    
     return true
   } catch (err) {
     _error('Failed to insert ChartMD incident', {

@@ -2,7 +2,7 @@ import { processChartMDData } from './services/chartmdService.js'
 import { processWTOPData, cleanup as cleanupWTOP } from './services/wtopService.js'
 import { createChartMDIncidentTable } from './models/chartmdIncidents.js'
 import { createWTOPIncidentTable } from './models/wtopIncidents.js'
-import { error as _error, info, debug } from './util/logger.js'
+import { error as _error, info } from './util/logger.js'
 import { config } from './config/config.js'
 import { healthCheck } from './config/db.js'
 
@@ -18,27 +18,28 @@ Promise.all([createChartMDIncidentTable(), createWTOPIncidentTable()]).catch(
 const interval = setInterval(async () => {
   try {
     info('Starting scheduled data processing')
-
-    debug('Initiating ChartMD data processing')
-    const chartMDStartTime = Date.now()
-    await processChartMDData()
+    
+    // ChartMD processing
+    const chartStartTime = Date.now()
+    const chartProcessedCount = await processChartMDData()
     info('ChartMD processing completed', {
-      processingTime: `${Date.now() - chartMDStartTime}ms`,
+      processingTime: `${Date.now() - chartStartTime}ms`,
+      incidentsProcessed: chartProcessedCount
     })
 
-    debug('Initiating WTOP data processing')
+    // WTOP processing
     const wtopStartTime = Date.now()
-    await processWTOPData()
+    const wtopProcessedCount = await processWTOPData()
     info('WTOP processing completed', {
       processingTime: `${Date.now() - wtopStartTime}ms`,
+      incidentsProcessed: wtopProcessedCount
     })
 
     info('Scheduled data processing cycle completed')
   } catch (error) {
     _error('Data processing failed', {
       error: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
+      stack: error.stack
     })
   }
 }, config.pollingInterval)

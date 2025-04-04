@@ -6,12 +6,13 @@ const CHARTMD_URL =
   'https://chartexp1.sha.maryland.gov/CHARTExportClientService/getEventMapDataJSON.do'
 
 export const processChartMDData = async () => {
+  let processedCount = 0
   try {
     const response = await fetchData(CHARTMD_URL)
 
     if (!response || !response.success || !response.data) {
       _error('Invalid ChartMD response structure', { response })
-      return
+      return 0
     }
 
     const incidents = response.data
@@ -41,14 +42,12 @@ export const processChartMDData = async () => {
 
     debug(`Found ${incidents.length} Montgomery County incidents`)
 
-    let successCount = 0
     for (const incident of incidents) {
       try {
         await insertChartMDIncident(incident)
-        debug(`Inserted incident ${incident.incident_id}`)
-        successCount++
+        processedCount++
       } catch (err) {
-        _error('Failed to insert incident', {
+        _error('Failed to insert ChartMD incident', {
           error: err.message,
           incident_id: incident.incident_id,
         })
@@ -56,12 +55,14 @@ export const processChartMDData = async () => {
     }
 
     info(
-      `Successfully processed ${successCount}/${incidents.length} ChartMD incidents`,
+      `Successfully processed ${processedCount}/${incidents.length} ChartMD incidents`,
     )
+    return processedCount
   } catch (err) {
     _error('ChartMD processing failed', {
       error: err.message,
       stack: err.stack,
     })
+    return 0
   }
 }

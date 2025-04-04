@@ -22,7 +22,7 @@ const logger = winston.createLogger({
       if (Object.keys(metadata).length > 0) {
         msg += ` ${JSON.stringify(metadata)}`
       }
-      return msg
+      return msg.trim()
     }),
   ),
   transports: [

@@ -13,41 +13,21 @@ const determineSeverity = (className) => {
 const parseDateTime = (dateStr) => {
   try {
     if (!dateStr) {
-      debug('Empty date string provided');
       return new Date();
     }
 
-    // Log the raw date string for debugging
-    debug(`Parsing date string: "${dateStr}"`);
-
-    // Handle different date formats
-    const formats = [
-      // Format: "04/01/2025 at 07:53pm"
-      {
-        regex: /(\d{2})\/(\d{2})\/(\d{4})\s+at\s+(\d{1,2}):(\d{2})(am|pm)/i,
-        parse: (match) => {
-          const [_, month, day, year, hours, minutes, meridiem] = match;
-          let hour = parseInt(hours);
-          
-          if (meridiem.toLowerCase() === 'pm' && hour < 12) hour += 12;
-          if (meridiem.toLowerCase() === 'am' && hour === 12) hour = 0;
-
-          return new Date(year, month - 1, day, hour, parseInt(minutes));
-        }
-      },
-    ];
-
-    // Try each format
-    for (const format of formats) {
-      const match = dateStr.match(format.regex);
-      if (match) {
-        return format.parse(match);
-      }
+    const match = dateStr.trim().match(/(\d{2})\/(\d{2})\/(\d{4})\s+at\s+(\d{1,2}):(\d{2})(am|pm)/i);
+    if (!match) {
+      return new Date();
     }
 
-    // If no format matches, log and return current time
-    debug(`No matching date format for: "${dateStr}"`);
-    return new Date();
+    const [_, month, day, year, hours, minutes, meridiem] = match;
+    let hour = parseInt(hours);
+    
+    if (meridiem.toLowerCase() === 'pm' && hour < 12) hour += 12;
+    if (meridiem.toLowerCase() === 'am' && hour === 12) hour = 0;
+
+    return new Date(year, month - 1, day, hour, parseInt(minutes));
   } catch (err) {
     _error('Date parsing failed', { 
       error: err.message, 
@@ -83,6 +63,7 @@ const initBrowser = async () => {
 
 export const processWTOPData = async () => {
   let page
+  let processedCount = 0
   try {
     const browser = await initBrowser()
     page = await browser.newPage()
@@ -117,7 +98,6 @@ export const processWTOPData = async () => {
     await page.waitForSelector('#incidents_container', { timeout: 5000 })
 
     const incidents = await page.evaluate(() => {
-      // Move selector strings to constants for better performance
       const SELECTORS = {
         items: '.newsstream-item',
         details: '.traffic-stream__incident-details',
@@ -152,35 +132,30 @@ export const processWTOPData = async () => {
       })
     })
 
-    // Process incidents in batches
-    const BATCH_SIZE = 5
-    let successCount = 0
-
-    for (let i = 0; i < incidents.length; i += BATCH_SIZE) {
-      const batch = incidents.slice(i, i + BATCH_SIZE)
-      await Promise.all(batch.map(async incident => {
-        try {
-          const processedIncident = {
-            ...incident,
-            severity: determineSeverity(incident.severity),
-            reported_time: parseDateTime(incident.reported_time),
-            last_update: parseDateTime(incident.last_update),
-            create_time: new Date()
-          }
-          await insertWTOPIncident(processedIncident)
-          successCount++
-        } catch (err) {
-          _error('Failed to insert WTOP incident', {
-            error: err.message,
-            incident_id: incident.incident_id
-          })
+    for (const incident of incidents) {
+      try {
+        const processedIncident = {
+          ...incident,
+          severity: determineSeverity(incident.severity),
+          reported_time: parseDateTime(incident.reported_time),
+          last_update: parseDateTime(incident.last_update),
+          create_time: new Date()
         }
-      }))
+        await insertWTOPIncident(processedIncident)
+        processedCount++
+      } catch (err) {
+        _error('Failed to insert WTOP incident', {
+          error: err.message,
+          incident_id: incident.incident_id
+        })
+      }
     }
 
-    info(`Processed ${successCount}/${incidents.length} WTOP incidents successfully`)
+    info(`Successfully processed ${processedCount}/${incidents.length} WTOP incidents`)
+    return processedCount
   } catch (err) {
     _error('WTOP processing failed', { error: err.message })
+    return 0
   } finally {
     if (page) await page.close()
   }
